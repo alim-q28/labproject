@@ -6,7 +6,7 @@ def find_closest():
     ax = sorted(a, key=lambda p: p[0])
     ay = sorted(a, key=lambda p: p[1])
     p1, p2, mi = closest_pair(ax, ay)
-    print("The closest ship locations are : ",p1," and ",p2," distance between them is: ",mi)
+    print("The closest ship locations are : ",p1," and ",p2," and the distance between them is: ",mi)
 def closest_pair(ax, ay):
     ln_ax = len(ax)  # It's quicker to assign variable
     if ln_ax <= 3:
