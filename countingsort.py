@@ -7,9 +7,9 @@ for _ in arr:  # findind maimum and the minimum values
     elif _<min:
         min = _
 control = []
-for i in range(0,(max-min)+1): # allocating a array 'control' of size (max-min)+1  and all the elements are zero
+for i in range(0,(max-min)+1): # allocating an array named 'control' of size (max-min)+1  and all the elements are zero
     control.append(0)
-for i in arr:           # counting the array elemnts by using min right shifted values of them to find index of control
+for i in arr:           # counting the array elements by using min right shifted values of them to find index of control
     control[i-min]=control[i-min]+1
 j=0   #j will run through indicies of array
 for i in range(0,(max-min)+1): # i runs thorough indices of control 
