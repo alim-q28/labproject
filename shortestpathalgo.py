@@ -4,7 +4,7 @@ class minheap:  #creating minheap class
         c=self.pq[x]
         self.pq[x]=self.pq[y]
         self.pq[y]=c
-    def minheapify(self,i): # function to maintain the heap from top to down complexity O(logn)
+    def minheapify(self,i): # Creating a function to maintain the heap from top to down complexity O(logn)
         l = 2*i+1  #Left child
         r = 2*i+2  #Right child
         smallest = i
@@ -60,8 +60,8 @@ class graph: #Graph Class
                     self.q.add(self.distance[b], b)
                     self.parent[b]=a
     def dijkstrashortestpath(self,x): 
-        self.distance[x-1]=0 # distance ofinitial node is 0
-        self.q.add(0, x-1) # Add this to priority queue
+        self.distance[x-1]=0 # distance of initial node is 0
+        self.q.add(0, x-1) # Add this to the priority queue
         while(self.q.size()>0):
             a=self.q.remove()
             if(self.processed[a]):
