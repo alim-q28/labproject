@@ -1,23 +1,24 @@
-# def printParenthesis(m, j, i ):
-    if j == i:
-        print(chr(65 + j), end = "") #when at diagonals just print the matrix name
-        return;
+ def printParenthesis(b, x, y ):
+    if x == y:
+        print(chr(65 + x), end = "") #when at diagonals just print the matrix name
+        return 0;
     else:
         print("(", end = "") #opening parenthesis
-        printParenthesis(m, m[j][i] - 1, i) # evaluating between i to k
-        printParenthesis(m, j, m[j][i])   # evaluating between k+1 to j combinning it we get i to j
+        printParenthesis(b, b[x][y] - 1, y) # evaluating between y to k
+        printParenthesis(b, x, b[x][y])   # evaluating between k+1 to x combinning it we get y to x
         print (")", end = "" ) # closing paranthesis
 def MatrixChainOrder(p, n):
-    m = [[0 for x in range(n)] for x in range(n)]
+    m = [[0 for s in range(n)] for s in range(n)]
     for l in range(2, n+1):
-        for i in range(n-l+ 1):
-            i + l-1 
-            m[i][j] = float('Inf')
+        for y in range(n-l+ 1):
+            y + l-1 
+            m[y][x] = int('Inf')
 
-
-arr = [int(i) for i in input().split()]
+printParenthesis(b,n-1,0)
+print("\nThe minimum cost of multiplying matrices: ",b[0][n-1])
+arr = [int(x) for y in input().split()]
 n = len(arr)-1
-m = MatrixChainOrder(arr, n)
+b = MatrixChainOrder(arr, n)
 print("The parenthesis will be like: ",end="")
-printParenthesis(m,n-1,0)
-print("\nThe minimum cost of multiplying matrices: ",m[0][n-1])
+
+#imtiaj
