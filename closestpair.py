@@ -1,4 +1,4 @@
-import math as m
+#import math as m
 from ast import literal_eval
 def find_closest():
     inputs = input("Enter the ship locations : ").split()
