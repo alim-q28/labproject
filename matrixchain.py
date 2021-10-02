@@ -1,4 +1,4 @@
-def printParenthesis(m, j, i ):
+# def printParenthesis(m, j, i ):
     if j == i:
         print(chr(65 + j), end = "") #when at diagonals just print the matrix name
         return;
@@ -11,14 +11,9 @@ def MatrixChainOrder(p, n):
     m = [[0 for x in range(n)] for x in range(n)]
     for l in range(2, n+1):
         for i in range(n-l+ 1):
-            j = i + l-1
+            i + l-1 
             m[i][j] = float('Inf')
-            for k in range(i, j):
-                q = m[i][k] + m[k + 1][j] + p[i]*p[k+1]*p[j+1]
-                if q < m[i][j]:
-                    m[i][j] = q
-                    m[j][i] = k + 1
-    return m
+
 
 arr = [int(i) for i in input().split()]
 n = len(arr)-1
